@@ -71,7 +71,7 @@ export default function DeepfakeDetector() {
       id: 1,
       caller: "Your Co-worker",
       transcript:
-        "Hi, I need your help urgently. Could you please reset my account. The dashboard is not opening and I must prepare the document before the 4 o’clock meeting. Just give me access now. I will fix everything after. Thank you.",
+        "Hi, I need your help urgently. Could you please reset my account. The dashboard is not opening and I must prepare the document before the 4 o'clock meeting. Just give me access now. I will fix everything after. Thank you.",
       isDeepfake: true,
       explanation: "Urgent, emotional language and pressure to bypass protocol are signs of impersonation scams.",
     },
@@ -81,7 +81,7 @@ export default function DeepfakeDetector() {
       id: 2,
       caller: "Co-worker",
       transcript:
-        "Hey! Sorry to call so suddenly — I’m stuck outside the dashboard and I really need to get that presentation updated before the 4pm review. Can you help unlock my access? I think my password expired or something. Oh — and don’t worry, I’ll reset it right after. Let me know if you need anything from me.",
+        "Hey! Sorry to call so suddenly — I'm stuck outside the dashboard and I really need to get that presentation updated before the 4pm review. Can you help unlock my access? I think my password expired or something. Oh — and don't worry, I'll reset it right after. Let me know if you need anything from me.",
       isDeepfake: false,
       explanation: "Sounds like a typical coworker request with polite tone, no urgency or red flags.",
     },
@@ -424,23 +424,7 @@ export default function DeepfakeDetector() {
                       <strong>Caller:</strong> {currentQuestion.caller}
                     </div>
                     <div className="border-t pt-2 mt-2">
-                    <p className="italic">"{currentQuestion.transcript}"</p>
-                    {/* Optional audio clip for question ID 1 */}
-                    {gameState.currentSection === "voice" && currentQuestion && currentQuestion.id === 1 && (
-  <audio controls className="mt-4 w-full">
-    <source src="/coworker.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
-)}
-{gameState.currentSection === "voice" && currentQuestion.id === 2 && (
-  <audio controls className="mt-4 w-full">
-    <source src="/Real.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
-)}
-
-
-
+                      <p className="italic">"{currentQuestion.transcript}"</p>
                     </div>
                   </div>
                 </div>

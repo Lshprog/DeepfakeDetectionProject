@@ -554,7 +554,7 @@ export default function GamePage() {
                             </div>
                             {/* Only show audio if present, no transcript or explanation */}
                             {gameState.currentSection === "voice" && "audio" in currentQuestion && currentQuestion.audio && (
-                              <audio controls className="mt-4 w-full">
+                              <audio key={currentQuestion.audio} controls className="mt-4 w-full">
                                 <source src={currentQuestion.audio} type="audio/mpeg" />
                                 Your browser does not support the audio element.
                               </audio>

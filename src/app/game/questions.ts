@@ -30,15 +30,9 @@ export const imageQuestions = [
     },
     {
       id: 2,
-      caller: "Co-worker",
+      caller: "Arthur, Co-worker",
       isDeepfake: true,
-      audio: "/audios/1"
-    },
-    {
-      id: 3,
-      caller: "Tech Support",
-      isDeepfake: true,
-      audio: "/audios/2"
+      audio: "/audios/fake.mp3"
     }
   ]
 

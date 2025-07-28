@@ -268,7 +268,6 @@ export default function GamePage() {
         <img
           src="/wallpapers/Edogawa_Conan.webp"
           alt="Edogawa Conan"
-          // className="w-40 md:w-52 fixed bottom-0 right-4 md:right-8 z-40 drop-shadow-lg select-none pointer-events-none"
           className="w-40 md:w-52 fixed bottom-0 right-4 md:right-8 z-40 drop-shadow-lg select-none pointer-events-none animate-mascot-pop"
         />
       </div>

@@ -53,6 +53,11 @@ export default function LeaderboardPage() {
           <Button className="w-full mt-6 bg-red-600 hover:bg-red-700 text-white" onClick={() => router.push("/game")}>Back to Game</Button>
         </CardContent>
       </Card>
+      <img
+        src="/wallpapers/Kaito_Kid.webp"
+        alt="Kaito_Kid"
+        className="w-80 md:w-100 fixed bottom-0 right-4 md:right-8 z-40 drop-shadow-lg select-none pointer-events-none animate-mascot-pop"
+      />
     </div>
   )
 } 

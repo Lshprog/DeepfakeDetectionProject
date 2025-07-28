@@ -12,7 +12,7 @@ export default function LoginPage() {
   const [error, setError] = useState("")
 
   const handleLogin = () => {
-    if (email === "alice@singtel.com" && password === "alice") {
+    if (email === "conan@singtel.com" && password === "conan") {
       localStorage.setItem("auth", "true")
       router.push("/game")
     } else {
@@ -21,10 +21,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-white px-4">
-      <Card className="w-full max-w-md p-6 space-y-6 shadow-lg">
+    <div className="min-h-screen flex items-center justify-center bg-platform flex-col px-4">
+      <Card className="w-full max-w-md p-6 space-y-6 shadow-lg animate-fade-in-up">
         <CardHeader>
-          <CardTitle className="text-2xl text-red-800 text-center">Log In</CardTitle>
+          <CardTitle className="text-2xl text-red-800 text-center">Welcome back, detective</CardTitle>
           <CardDescription className="text-center">Enter your credentials to continue</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -35,7 +35,7 @@ export default function LoginPage() {
               className="w-full border rounded px-3 py-2"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="you@example.com"
+              placeholder="your_name@example.com"
             />
           </div>
           <div>
@@ -45,7 +45,7 @@ export default function LoginPage() {
               className="w-full border rounded px-3 py-2"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
+              placeholder="********"
             />
           </div>
           {error && <p className="text-sm text-red-600">{error}</p>}

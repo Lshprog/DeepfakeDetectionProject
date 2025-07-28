@@ -6,9 +6,9 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 const mockedUsers = [
-  { username: "user2", points: 7 },
-  { username: "user3", points: 5 },
-  { username: "user4", points: 3 },
+  { username: "Shinichi", points: 7 },
+  { username: "Heiji", points: 5 },
+  { username: "Mouri", points: 3 },
 ]
 
 export default function LeaderboardPage() {
@@ -24,23 +24,30 @@ export default function LeaderboardPage() {
 
   // Combine and sort
   const leaderboard = [
-    { username: "Alice", points: userPoints },
+    { username: "Conan", points: userPoints },
     ...mockedUsers,
   ].sort((a, b) => b.points - a.points)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-white flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-blue-950 bg-[url('/mascot/detective-pattern.svg')] bg-repeat bg-cover flex flex-col items-center justify-center">
       <Card className="max-w-md w-full mx-auto">
         <CardHeader>
-          <CardTitle className="text-2xl text-red-800 text-center">Leaderboard</CardTitle>
+          <CardTitle className="text-2xl text-red-800 text-center">Detective Rank</CardTitle>
         </CardHeader>
         <CardContent>
           <ul className="divide-y divide-gray-200">
-            {leaderboard.map((entry, idx) => (
-              <li key={entry.username} className={`flex justify-between py-3 px-2 ${entry.username === "Alice" ? "font-bold text-blue-700" : ""}`}>
-                <span>{idx + 1}. {entry.username}</span>
-                <span className="text-red-700 font-bold">{entry.points} pts</span>
-              </li>
+            {leaderboard.map(user => (
+              <div key={user.username} className="flex items-center gap-3 py-2">
+                <img
+                  src={`/profile-pics/${user.username}.png`}
+                  alt={`${user.username}'s profile`}
+                  className="rounded-full border border-gray-300 object-cover"
+                  style={{ aspectRatio: '1/1', maxWidth: 40, maxHeight: 40 }}
+                  onError={e => { e.currentTarget.src = '/profile-pics/default.png'; }} // fallback if missing
+                />
+                <span className="font-semibold">{user.username}</span>
+                <span className="ml-auto">{user.points}</span>
+              </div>
             ))}
           </ul>
           <Button className="w-full mt-6 bg-red-600 hover:bg-red-700 text-white" onClick={() => router.push("/game")}>Back to Game</Button>

@@ -35,7 +35,7 @@ export default function ShopPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-blue-950 bg-[url('/mascot/detective-pattern.svg')] bg-repeat bg-cover flex flex-col">
       <div className="container mx-auto px-4 py-8">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold text-blue-800">Item Shop</h1>

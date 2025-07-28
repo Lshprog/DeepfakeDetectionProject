@@ -20,7 +20,7 @@ export function ProfileMenu({ points, onClose, onGoToLeaderboard, onResetPoints 
           className="w-full mb-2 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
           onClick={onGoToLeaderboard}
         >
-          Leaderboard
+          Detective Rank
         </button>
       </div>
       <button
